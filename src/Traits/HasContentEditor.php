@@ -12,6 +12,9 @@ trait HasContentEditor
             ->label(__('filament-blog::filament-blog.content'))
             ->required()
             ->toolbarButtons(config('filament-blog.toolbar_buttons'))
+                ->fileAttachmentsDisk('s3')
+                ->fileAttachmentsDirectory('blog')
+                ->fileAttachmentsVisibility('private')
             ->columnSpan([
                 'sm' => 2,
             ]);
