@@ -47,6 +47,7 @@ class AuthorResource extends Resource
                             ->disk(config('filament-blog.avatar.disk', 'public'))
                             ->maxSize(config('filament-blog.avatar.maxSize', 5120))
                             ->directory(config('filament-blog.avatar.directory', 'blog'))
+                          ->visibility('private')
                             ->columnSpan([
                                 'sm' => 2,
                             ]),
